@@ -57,7 +57,7 @@ LIMIT 10;
 -- Q3. Return all the track names that have a song length longer than the average song length. Return the track and milliseconds for
 --  each track. Order by the song length with the longest song listed first.
 
-SELECT AVG(	milliseconds) FROM track; 
+SELECT AVG(milliseconds) FROM track; 
 
 SELECT name,milliseconds FROM track 
 WHERE milliseconds > (SELECT AVG(milliseconds) FROM track)
@@ -122,11 +122,6 @@ WITH my_cte AS (
 	WHERE rowno = 1 
 	ORDER BY billing_country;
 	
-	
-	
-
-
-SELECT * FROM customer;
 
 
 
